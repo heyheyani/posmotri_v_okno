@@ -47,7 +47,6 @@ ol {
   align-items: end;
   gap: 30px;
   width: 1140px;
-  /*min-height: 534px;*/
 }
 
 .search-form {
@@ -62,8 +61,6 @@ ol {
   height: 298px;
   overflow: auto;
   position: relative;
- /* padding-bottom: 1px;
-  padding-right: 3px;*/
   padding: 1px 2px;
 }
 
@@ -72,7 +69,7 @@ ol {
   flex-direction: column;
   gap: 22px;
   height: 100%;
-  width: 100%;
+  max-width: 100%;
 }
 
 .result {
@@ -107,6 +104,7 @@ ol {
   flex-direction: row;
   align-items: start;
   padding-top: 2px;
+  color: #fff;
 }
 
 .content__video-card-thumbnail {
@@ -120,7 +118,6 @@ ol {
   height: 100%;
   width: 100%;
   margin-left: 2px;
-
 }
 
 .search-form__fieldset-title {
@@ -149,6 +146,9 @@ ol {
   line-height: 100%;
   text-transform: uppercase;
   color: #fff;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -156,18 +156,23 @@ ol {
   font-size: 18px;
   line-height: 90%;
   color: #fff;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  max-width: 200px;
 }
 
 .content__card-link {
   text-decoration: none;
   display: block;
   min-height: 107px;
+  
 }
 
 .visually-hidden {
@@ -273,16 +278,15 @@ input[type="text"]:focus-visible {
   text-align: center;
   color: #fff;
   border: 1px solid #fff;
+  height: 34px;
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
   align-self: end;
 }
 
 .more-button {
-  height: 34px;
   width: 100%;
   padding: 3px 14px 3px 1px;
 }
@@ -311,8 +315,7 @@ input[type="text"]:focus-visible {
 
 .content__video-card:hover {
   text-decoration: underline;
-  color: #fff;
-  text-underline-offset: 2px;
+  text-underline-offset: 1px;
 }
 
 .content__card-link:focus {
